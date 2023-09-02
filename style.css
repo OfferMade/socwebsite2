@@ -270,9 +270,15 @@ section#hero{
     .navbar .action_btn{
         display: none;
     }
+    .navbar{
+        position: relative;
+        z-index: 999;
+        overflow: visible;
+    }
     
     .navbar .toggle_btn{
         display: block;
+        margin-right: 15px;
     }
 
     .dropdown_menu .action_btn{
@@ -288,12 +294,31 @@ section#hero{
     .container{
         display: none;
     }
+
+    .pipelinecontainer{
+        display: block;
+        top: 50px;
+        left: 10px;
+        height: auto;
+        width: 700px;
+    }
 }
 
 @media (max-width: 576px) {
+
     .dropdown_menu{
         left: 2rem;
         width: unset;
+    }
+
+    .pipelinecontainer{
+    
+        display: block;
+        top: 50px;
+        left: 10px;
+        right: 0;
+        height: auto;
+        width: 380px;
     }
 }
 
