@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #171717;
+    background: url('images/1.jpg');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+body#teams{
+    height: 100vh;
+    background: url('images/4.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+body#pipeline{
+    height: 100vh;
+    background: url('images/2.jpg');
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #EDEDED;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: red;
+}
+
+/*Header*/
+
+header{
+    position: relative;
+    padding: 0;
+    backdrop-filter: blur(5px);
+}
+
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo a{
+    padding-left: 10px;
+    color: #EDEDED;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 6rem;
+    
+}
+
+.navbar .links li{
+    background-color: #444444;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.navbar .toggle_btn{
+    padding-right: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.action_btn{
+    background-color: #DA0037;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #171717;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+
+/*Dropdown Menu*/
+
+.dropdown_menu{
+    
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    height: 0;
+    width: 300px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 165px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/*Hero*/
+
+section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+#hero h1{
+    font-weight: bolder;
+    color: #DA0037;
+    font-size: 3rem;
+    margin-bottom: 7px;
+}
+
+#hero p{
+    color: #EDEDED;
+    font-size: 1.5rem;
+
+}
+
+/*CARD*/
+
+.container{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: calc(100vh - 100px);
+}
+.container .column{
+    justify-content: center;
+    background-color: #444444;
+    width: 400px;
+    text-align: center;
+    box-shadow: 5px 5px 10px #171717;
+    border-radius: 20px;
+    padding-top: 10px;
+
+}
+.container .column p{
+    background-color: #171717;
+    color: #DA0037;
+    font-size: larger;
+    padding: 10px;
+}
+
+.container .column h1{
+
+    margin: 5px;
+    background-color: #171717;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    color:#DA0037 ;
+    width: 390px;
+    box-shadow: 0 2px 5px #DA0037;
+}
+
+.container .column img{
+    height: 300px;
+    width: 300px;
+    padding: 15px;
+}
+
+
+/*pipeline*/
+
+.pipelinecontainer{
+    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    top: 75px;
+    left: 68px;
+    height: 600px;
+    width: 1400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #DA0037;
+    
+}
+
+.pipelinecontainer h1{
+    color: #DA0037;
+    font-weight: bold;
+}
+
+.pipelinecontainer p{
+    color: #EDEDED;
+}
+
+.trainbutton{
+
+    text-align: center;
+    width: 100px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #DA0037;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    box-shadow: 0 2px #444444;
+    
+}
+
+.trainbutton:hover{
+    scale: 0.95;
+}
+.trainbutton a:hover{
+    color: #444444;
+}
+
+/*Responsive Design*/
+
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu .action_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+
+    .container{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
